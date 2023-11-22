@@ -20,5 +20,15 @@ namespace GewaechshausMitAnimation
         {
             InitializeComponent();
         }
+
+        private void TempSliderOutdoor_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void TempSliderIndoor_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }
