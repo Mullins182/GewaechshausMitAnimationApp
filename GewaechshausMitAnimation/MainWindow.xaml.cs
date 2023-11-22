@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using GewaechshausMitAnimation.Controller;
+using System;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,19 +18,26 @@ namespace GewaechshausMitAnimation
     /// </summary>
     public partial class MainWindow : Window
     {
+        string outdoorTemp = "";
+        string indoorTemp  = "";
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void TempSliderOutdoor_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
+            
 
         }
 
-        private void TempSliderIndoor_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void set_outdoor_temp_Click(object sender, RoutedEventArgs e)
         {
+            outdoorTemp = setOutdoorTemp.Text;
+            ActualTempOutdoor.Text = outdoorTemp;
+        }
 
+        private void set_indoor_temp_Click(object sender, RoutedEventArgs e)
+        {
+            indoorTemp = setIndoorTemp.Text;
+            ActualTempIndoor.Text = indoorTemp;
         }
     }
 }
