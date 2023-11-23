@@ -18,8 +18,8 @@ namespace GewaechshausMitAnimation
     /// </summary>
     public partial class MainWindow : Window
     {
-        string outdoorTemp = "";
-        string indoorTemp  = "";
+        string outdoorTemp = "20";
+        string indoorTemp  = "20";
         public MainWindow()
         {
             InitializeComponent();
@@ -42,12 +42,17 @@ namespace GewaechshausMitAnimation
 
         private void outdoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ActualTempOutdoor.Text  = Convert.ToString(outdoorTempSlider.Value);
-            ActualTempIndoor.Text   = Convert.ToString(indoorTempSlider.Value);
-            setIndoorTemp.Text      = Convert.ToString(indoorTempSlider.Value);
             setOutdoorTemp.Text     = Convert.ToString(outdoorTempSlider.Value);
+            setIndoorTemp.Text = Convert.ToString(indoorTempSlider.Value);
 
+            ActualTempIndoor.Text = Convert.ToString(Functions.ShowActualSliderIndoorValue(Convert.ToInt32(indoorTemp), indoorTempSlider.Value));
 
+            //ActualTempIndoor.Text = Convert.ToString(i);
+            //ActualTempIndoor.Text   = Convert.ToString(indoorTempSlider.Value);
+            //ActualTempOutdoor.Text  = Convert.ToString(outdoorTempSlider.Value);
         }
+
+
     }
+
 }
