@@ -24,19 +24,19 @@
 
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Grid.Row="1">
+        <StackPanel Grid.Column="0" Grid.Row="1" Cursor="Cross">
             <Label Content="Außentemperatur festlegen" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Width="500" Height="30" BorderThickness="1,1,1,1" FontSize="16" FontWeight="Bold" Foreground="#FFFFC545" FontFamily="Arial Black" HorizontalContentAlignment="Center"/>
-            <TextBox x:Name="setOutdoorTemp" TextWrapping="Wrap" Margin="10" Text="15" TextAlignment="center" Height="50" Width="74" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F"/>
+            <TextBox x:Name="setOutdoorTemp" TextWrapping="Wrap" Margin="10" Text="15" TextAlignment="center" Height="50" Width="90" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F" Cursor="Cross"/>
             <Button x:Name="set_outdoor_temp" Content="Außentemperatur festlegen" Height="30" Background="#FFD8450D" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="24" Click="set_outdoor_temp_Click"/>
-            <Slider Name="outdoorTempSlider" Width="284" Height="58" Minimum="-20" Maximum="45" Margin="50" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged"/>
+            <Slider Name="outdoorTempSlider" Width="284" Height="58" Minimum="-20" Maximum="45" Margin="50" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged" TickFrequency="5" TickPlacement="BottomRight" SmallChange="1" LargeChange="5" Cursor="Cross"/>
 
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="1">
+        <StackPanel Grid.Column="1" Grid.Row="1" Cursor="Cross">
             <Label Content="Innentemperatur festlegen" HorizontalAlignment="Center" Margin="0,27,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500" Height="30" BorderThickness="1,1,1,1" FontSize="16" FontWeight="Bold" Foreground="#FFFFC545" FontFamily="Arial Black" HorizontalContentAlignment="Center" Grid.Column="1"/>
             <TextBox x:Name="setIndoorTemp" TextWrapping="Wrap" Margin="10" Text="15" TextAlignment="center" Height="50" Width="74" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F"/>
             <Button x:Name="set_indoor_temp" Content="Innentemperatur festlegen" Height="30" Background="#FFD8450D" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="24" Click="set_indoor_temp_Click"/>
-            <Slider x:Name="indoorTempSlider" Width="284" Height="58" Margin="50" Minimum="-20" Maximum="45" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged"/>
+            <Slider x:Name="indoorTempSlider" Width="284" Height="58" Margin="50" Minimum="-20" Maximum="45" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged" SmallChange="1" LargeChange="5" Cursor="Cross" TickPlacement="BottomRight" TickFrequency="5"/>
 
         </StackPanel>
         <Image x:Name="GewaechshausSkizze" HorizontalAlignment="Right" Height="387" VerticalAlignment="Bottom" Width="516" Source="/gewaechshausSkizze.jpg" Cursor="Hand" Opacity="0.85"/>

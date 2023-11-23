@@ -42,7 +42,12 @@ namespace GewaechshausMitAnimation
 
         private void outdoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ActualTempOutdoor.Text = Convert.ToString(outdoorTempSlider.Value);
+            ActualTempOutdoor.Text  = Convert.ToString(outdoorTempSlider.Value);
+            ActualTempIndoor.Text   = Convert.ToString(indoorTempSlider.Value);
+            setIndoorTemp.Text      = Convert.ToString(indoorTempSlider.Value);
+            setOutdoorTemp.Text     = Convert.ToString(outdoorTempSlider.Value);
+
+
         }
     }
 }
