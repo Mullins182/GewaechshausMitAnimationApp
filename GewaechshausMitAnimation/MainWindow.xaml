@@ -29,7 +29,7 @@
             <TextBox x:Name="setOutdoorTemp" TextWrapping="Wrap" Margin="10" Text="15" TextAlignment="center" Height="50" Width="90" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F" Cursor="Cross"/>
             <Button x:Name="set_outdoor_temp" Content="Außentemperatur festlegen" Height="30" BorderBrush="black" BorderThickness="3" Background="#FFD8450D" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="24" Click="set_outdoor_temp_Click"/>
             <Slider x:Name="outdoorTempSlider" Value="20" Width="284" Height="58" Minimum="-20" Maximum="45" Margin="20" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged" TickFrequency="5" TickPlacement="BottomRight" SmallChange="1" LargeChange="5" Cursor="Cross"/>
-            
+
 
         </StackPanel>
 
@@ -48,9 +48,10 @@
 
         </StackPanel>
         <Image x:Name="GewaechshausSkizze" HorizontalAlignment="Right" Height="387" VerticalAlignment="Bottom" Width="516" Source="/gewaechshausSkizze.jpg" Cursor="Hand" Opacity="0.85"/>
-        <Image x:Name="GewaechshausInnen" Grid.Column="1" HorizontalAlignment="Left" Height="387" VerticalAlignment="Bottom" Width="582" Source="/gewaechshausInnen.jpg" Cursor="Hand" Opacity="0.85"/>
+        <Image x:Name="GewaechshausInnen" Grid.Column="1" HorizontalAlignment="Left" Height="387" VerticalAlignment="Bottom" Width="560" Source="/gewaechshausInnen.jpg" Cursor="Hand" Opacity="0.85"/>
         <Label Content="        GEWÄCHSHAUS STEUERUNG" HorizontalAlignment="Left" Margin="476,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="548" Height="50" Cursor="Hand" FontFamily="MV Boli" FontSize="24" Foreground="#FFC6D019" FontWeight="Bold"/>
-        <TextBlock x:Name="ActualTempIndoor" TextWrapping="Wrap" Text="15" TextAlignment="center" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Margin="586,214,63,193" Grid.Column="1"/>
-        <TextBlock x:Name="ActualTempOutdoor" TextWrapping="Wrap" Text="15" TextAlignment="center" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Margin="97,201,552,193"/>
+        <TextBlock x:Name="ActualTempIndoor" TextWrapping="Wrap" Text="15" TextAlignment="center" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Margin="608,60,40,346" Grid.Column="1"/>
+        <TextBlock x:Name="ActualTempOutdoor" TextWrapping="Wrap" Text="15" TextAlignment="center" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Margin="54,54,596,340"/>
+        <TextBlock x:Name="SystemsStatusBox" HorizontalAlignment="Left" Margin="578,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="150" Width="150" Background="black" Foreground="Gold" Grid.Column="1"><Run Text="LÜFTUNG "/><Run Language="de-de" Text=" "/><Run Text="-&gt;"/><LineBreak/><Run Language="de-de" Text="KÜHLUNG -&gt;"/><LineBreak/><Run Language="de-de" Text="HEIZUNG  -&gt;"/><LineBreak/><Run Language="de-de"/><LineBreak/><Run Language="de-de" Text="VERDUNKLUNG -&gt;"/></TextBlock>
     </Grid>
 </Window>
