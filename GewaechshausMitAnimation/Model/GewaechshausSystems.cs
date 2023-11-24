@@ -3,33 +3,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace GewaechshausMitAnimation.Model
 {
-    internal class GewaechshausSystems
+    public class GewaechshausSystems
     {
         private bool lueftung = false;
         private bool kuehlung = false;
         private bool heizung  = false;
         private bool verdunkl = false;
 
-        GewaechshausSystems() { }
+        public GewaechshausSystems() { }
 
-        public bool getLueftungStatus()
+        public string getLueftungStatus()
         { 
-            return lueftung;        
+            if (lueftung == true)
+            {
+                return "AN";       
+            }
+            else
+            {
+                return "AUS";
+            }
         }
-        public bool getKuehlungStatus() 
+        public string getKuehlungStatus() 
         {
-            return kuehlung;            
+            if (kuehlung == true)
+            {
+                return "AN";
+            }
+            else
+            {
+                return "AUS";
+            }
         }
-        public bool getHeizungStatus()
+        public string getHeizungStatus()
         {
-            return heizung;        
+            if (heizung == true)
+            {
+                return "AN";
+            }
+            else
+            {
+                return "AUS";
+            }
         }
-        public bool getVerdunklStatus()
+        public string getVerdunklStatus()
         {
-            return verdunkl;        
+            if (verdunkl == true)
+            {
+                return "AKTIV";
+            }
+            else
+            {
+                return "INAKTIV";
+            }
         }
 
         public void setLueftung(bool value)
@@ -49,10 +78,43 @@ namespace GewaechshausMitAnimation.Model
             verdunkl = value;
         }
 
-        public void setSystems()
+        public void setSystems(int x, int y)
         {
-
+            if (x < 13 && y > 13)
+            {
+                lueftung    = true;
+                heizung     = false;
+                kuehlung    = false;
+                verdunkl    = false;
+            }
+            else if (x < 13 && y <= 13)
+            {
+                lueftung    = false;
+                heizung     = true;
+                kuehlung    = false;
+                verdunkl    = false;
+            }
+            else if (x >= 13 && x <= 30)
+            {
+                lueftung    = false;
+                heizung     = false;
+                kuehlung    = false;
+                verdunkl    = false;
+            }
+            else if (x > 30 && y < 30)
+            {
+                lueftung    = true;
+                heizung     = false;
+                kuehlung    = false;
+                verdunkl    = true;
+            }
+            else if (x > 30 && y > 30)
+            {
+                lueftung    = false;
+                heizung     = false;
+                kuehlung    = true;
+                verdunkl    = true;
+            }
         }
-
     }
 }
