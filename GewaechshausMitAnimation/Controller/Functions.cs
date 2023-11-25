@@ -20,19 +20,6 @@ namespace GewaechshausMitAnimation.Controller
             Console.Write(x);
             return x;
         }
-
-        //public static void SystemStatusOutput()
-        //{
-        //    GewaechshausSystems Tomate = new GewaechshausSystems();
-
-        //    Tomate.setSystems( indoorTemp, outdoorTemp);
-
-        //    LueftungStatus.Text = Convert.ToString(Tomate.getLueftungStatus());
-        //    KuehlungStatus.Text = Convert.ToString(Tomate.getKuehlungStatus());
-        //    HeizungStatus.Text = Convert.ToString(Tomate.getHeizungStatus());
-        //    VerdunklungStatus.Text = Convert.ToString(Tomate.getVerdunklStatus());
-
-        //}
     }
 }
 

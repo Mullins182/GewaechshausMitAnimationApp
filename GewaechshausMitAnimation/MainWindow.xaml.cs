@@ -39,17 +39,16 @@ namespace GewaechshausMitAnimation
         private void outdoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             setOutdoorTemp.Text = Convert.ToString(outdoorTempSlider.Value);
-            outdoorTemp         = Convert.ToInt32(outdoorTempSlider.Value);
         }
         private void indoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             setIndoorTemp.Text  = Convert.ToString(indoorTempSlider.Value);
-            indoorTemp          = Convert.ToInt32(indoorTempSlider.Value);
         }
 
         private void set_outdoor_temp_Click(object sender, RoutedEventArgs e)
         {
-            ActualTempOutdoor.Text  = Convert.ToString(outdoorTemp);
+            outdoorTemp                 = Convert.ToInt32(outdoorTempSlider.Value);
+            ActualTempOutdoor.Text      = Convert.ToString(outdoorTemp);
 
             Tomate.setSystems(indoorTemp, outdoorTemp);
 
@@ -61,7 +60,8 @@ namespace GewaechshausMitAnimation
 
         private void set_indoor_temp_Click(object sender, RoutedEventArgs e)
         {
-            ActualTempIndoor.Text   = Convert.ToString(indoorTemp);
+            indoorTemp                  = Convert.ToInt32(indoorTempSlider.Value);
+            ActualTempIndoor.Text       = Convert.ToString(indoorTemp);
 
             Tomate.setSystems(indoorTemp, outdoorTemp);
 
