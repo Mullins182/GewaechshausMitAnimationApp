@@ -6,6 +6,32 @@
         xmlns:local="clr-namespace:GewaechshausMitAnimation"
         mc:Ignorable="d"
         Title="Gewächshaus-Automation" Height="800" Width="1650" Background="DarkRed" Cursor="Hand">
+    
+    <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"
+             TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+      BorderBrush="{TemplateBinding BorderBrush}"
+      BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+         Value="False">
+                    <Setter Property="Background"  
+          Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+          Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <!--Control Templates Override ENDE !-->
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition>
@@ -27,7 +53,7 @@
         <StackPanel Grid.Column="0" Grid.Row="1" Cursor="Cross">
             <Label Content="°C" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Width="500" Height="30" BorderThickness="1,1,1,1" FontSize="16" FontWeight="Bold" Foreground="#FFFFC545" FontFamily="Arial Black" HorizontalContentAlignment="Center"/>
             <TextBox x:Name="setOutdoorTemp" TextWrapping="Wrap" Margin="10" Text="20" TextAlignment="center" Height="50" Width="90" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F" Cursor="Cross"/>
-            <Button x:Name="set_outdoor_temp" Content="Außentemperatur festlegen" Height="50" BorderBrush="black" BorderThickness="3" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_outdoor_temp_Click"/>
+            <Button x:Name="set_outdoor_temp" Content="Außentemperatur festlegen" Height="50" BorderBrush="black" BorderThickness="3" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_outdoor_temp_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
             <Slider x:Name="outdoorTempSlider" Value="20" Width="284" Height="58" Minimum="-20" Maximum="45" Margin="20" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged" TickFrequency="5" TickPlacement="BottomRight" SmallChange="1" LargeChange="5" Cursor="Cross"/>
 
 
@@ -36,7 +62,7 @@
         <StackPanel Grid.Column="1" Grid.Row="1" Cursor="Cross">
             <Label Content="°C" HorizontalAlignment="Center" Margin="0,27,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500" Height="30" BorderThickness="1,1,1,1" FontSize="16" FontWeight="Bold" Foreground="#FFFFC545" FontFamily="Arial Black" HorizontalContentAlignment="Center" Grid.Column="1"/>
             <TextBox x:Name="setIndoorTemp" TextWrapping="Wrap" Margin="10" Text="20" TextAlignment="center" Height="50" Width="90" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F"/>
-            <Button x:Name="set_indoor_temp" Content="Innentemperatur festlegen" Height="50" BorderThickness="3" BorderBrush="black" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_indoor_temp_Click" Cursor="Hand">
+            <Button x:Name="set_indoor_temp" Content="Innentemperatur festlegen" Height="50" BorderThickness="3" BorderBrush="black" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_indoor_temp_Click" Cursor="Hand" Template="{StaticResource NoMouseOverButtonTemplate}">
                 <Button.OpacityMask>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>

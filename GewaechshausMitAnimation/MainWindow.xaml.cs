@@ -1,16 +1,5 @@
-﻿using GewaechshausMitAnimation.Controller;
-using GewaechshausMitAnimation.Model;
-using System;
-using System.Text;
+﻿using GewaechshausMitAnimation.Model;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GewaechshausMitAnimation
 {
@@ -34,7 +23,6 @@ namespace GewaechshausMitAnimation
             HeizungStatus.Text          = Tomate.getHeizungStatus();
             VerdunklungStatus.Text      = Tomate.getVerdunklStatus();
         }
-                
 
         private void outdoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
