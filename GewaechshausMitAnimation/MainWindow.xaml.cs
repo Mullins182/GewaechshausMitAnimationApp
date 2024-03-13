@@ -36,7 +36,7 @@ namespace GewaechshausMitAnimation
         private void set_outdoor_temp_Click(object sender, RoutedEventArgs e)
         {
             outdoorTemp                 = Convert.ToInt32(outdoorTempSlider.Value);
-            ActualTempOutdoor.Text      = Convert.ToString(outdoorTemp);
+            ActualTempOutdoor.Text      = $"{Convert.ToString(outdoorTemp)} °C";
 
             Tomate.setSystems(indoorTemp, outdoorTemp);
 
@@ -49,7 +49,7 @@ namespace GewaechshausMitAnimation
         private void set_indoor_temp_Click(object sender, RoutedEventArgs e)
         {
             indoorTemp                  = Convert.ToInt32(indoorTempSlider.Value);
-            ActualTempIndoor.Text       = Convert.ToString(indoorTemp);
+            ActualTempIndoor.Text       = $"{Convert.ToString(indoorTemp)} °C";
 
             Tomate.setSystems(indoorTemp, outdoorTemp);
 
