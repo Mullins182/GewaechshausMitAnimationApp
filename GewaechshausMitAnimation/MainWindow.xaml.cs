@@ -8,6 +8,7 @@ namespace GewaechshausMitAnimation
     /// </summary>
     public partial class MainWindow : Window
     {
+    
         GewaechshausSystems Tomate = new GewaechshausSystems();
 
         int outdoorTemp = 20;
@@ -17,7 +18,6 @@ namespace GewaechshausMitAnimation
             InitializeComponent();
 
             Tomate.setSystems(indoorTemp, outdoorTemp);
-
             LueftungStatus.Text         = Tomate.getLueftungStatus();
             KuehlungStatus.Text         = Tomate.getKuehlungStatus();
             HeizungStatus.Text          = Tomate.getHeizungStatus();
@@ -83,5 +83,4 @@ namespace GewaechshausMitAnimation
         //    ActualTempIndoor.Text = Convert.ToString(indoorTemp);
         //}
     }
-
 }
