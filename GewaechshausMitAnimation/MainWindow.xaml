@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GewaechshausMitAnimation"
         mc:Ignorable="d"
         Title="Gewächshaus-Automation" MinHeight="800" MinWidth="1600" Background="DarkRed" WindowState="Normal" WindowStartupLocation="CenterScreen"
-        MaxHeight="800" MaxWidth="1600" ShowInTaskbar="False">
+        ShowInTaskbar="False" ResizeMode="NoResize" BorderThickness="1.2" BorderBrush="Black">
     
     <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
     <Window.Resources>
@@ -48,7 +48,7 @@
                 <TextBox x:Name="setOutdoorTemp" TextWrapping="Wrap" Margin="10" Text="20" TextAlignment="center" Height="50" Width="90" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F"/>
                 <Label Content="°C" Padding="0,5,25,0" Width="70" Height="50" FontSize="38" FontWeight="Bold" Foreground="#FFFFC545" FontFamily="Arial Black"/>
             </StackPanel>
-            <Button x:Name="set_outdoor_temp" Content="Außentemperatur festlegen" Height="50" BorderBrush="black" BorderThickness="3" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_outdoor_temp_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
+            <Button x:Name="set_outdoor_temp" Content="Außentemperatur festlegen" Height="50" BorderBrush="black" BorderThickness="3" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_outdoor_temp_Click" MouseEnter="set_outdoor_temp_MouseEnter" MouseLeave="set_outdoor_temp_MouseLeave" Template="{StaticResource NoMouseOverButtonTemplate}"/>
             <Slider x:Name="outdoorTempSlider" Value="20" Width="284" Height="58" Minimum="-20" Maximum="45" Margin="20" IsSnapToTickEnabled="true" ValueChanged="outdoorTempSlider_ValueChanged" TickFrequency="5" TickPlacement="BottomRight" SmallChange="1" LargeChange="5" Cursor="Cross"/>
         </StackPanel>
 
@@ -57,7 +57,7 @@
                 <TextBox x:Name="setIndoorTemp" TextWrapping="Wrap" Margin="10" Text="20" TextAlignment="center" Height="50" Width="90" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Background="#FFB91F1F"/>
                 <Label Content="°C" Padding="0,5,25,0"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Width="70" Height="50" FontSize="38" FontWeight="Bold" Foreground="#FFFFC545" FontFamily="Arial Black" Grid.Column="1"/>
             </StackPanel>
-            <Button x:Name="set_indoor_temp" Content="Innentemperatur festlegen" Height="50" BorderThickness="3" BorderBrush="black" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_indoor_temp_Click" Template="{StaticResource NoMouseOverButtonTemplate}"/>
+            <Button x:Name="set_indoor_temp" Content="Innentemperatur festlegen" Height="50" BorderThickness="3" BorderBrush="black" Background="#FF3E1111" Foreground="#FFE6E809" FontFamily="Chiller" FontSize="35" Click="set_indoor_temp_Click" MouseEnter="set_indoor_temp_MouseEnter" MouseLeave="set_indoor_temp_MouseLeave" Template="{StaticResource NoMouseOverButtonTemplate}"/>
             <Slider x:Name="indoorTempSlider" Value="20" Width="284" Height="58" Margin="20" Minimum="-20" Maximum="45" IsSnapToTickEnabled="true" SmallChange="1" LargeChange="5" Cursor="Cross" TickPlacement="BottomRight" TickFrequency="5" ValueChanged="indoorTempSlider_ValueChanged"/>
         </StackPanel>
         <Image x:Name="GewaechshausSkizze" HorizontalAlignment="Right" Height="372" VerticalAlignment="Bottom" Width="496" Source="/gewaechshausSkizze.jpg" Cursor="Hand" Opacity="0.85"/>
