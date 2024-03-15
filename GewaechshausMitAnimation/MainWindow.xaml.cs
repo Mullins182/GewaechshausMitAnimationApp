@@ -129,29 +129,5 @@ namespace GewaechshausMitAnimation
         {
             this.Close();
         }
-
-        //public static void SystemStatusOutput(GewaechshausSystems Tomate, int indoorTemp, int outdoorTemp)
-        //{
-        //    Tomate.setSystems(indoorTemp, outdoorTemp);
-
-        //    MainWindow.LueftungStatus.Text = Convert.ToString(Tomate.getLueftungStatus());
-        //    KuehlungStatus.Text = Convert.ToString(Tomate.getKuehlungStatus());
-        //    HeizungStatus.Text = Convert.ToString(Tomate.getHeizungStatus());
-        //    VerdunklungStatus.Text = Convert.ToString(Tomate.getVerdunklStatus());
-
-        //}
-
-
-
-
-        //private void OutdoorTempSetButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ActualTempOutdoor.Text = Convert.ToString(outdoorTemp);
-        //}
-
-        //private void IndoorTempSetButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ActualTempIndoor.Text = Convert.ToString(indoorTemp);
-        //}
     }
 }
