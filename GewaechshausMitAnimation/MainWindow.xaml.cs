@@ -16,6 +16,7 @@ namespace GewaechshausMitAnimation
 
         int outdoorTemp = 20;
         int indoorTemp  = 20;
+
         public MainWindow()
         {
             InitializeComponent();

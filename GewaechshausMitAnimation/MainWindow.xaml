@@ -8,7 +8,7 @@
         Title="Gewächshaus-Automation" MinHeight="800" MinWidth="1600" Background="DarkRed" WindowState="Normal" WindowStartupLocation="CenterScreen"
         ShowInTaskbar="False" ResizeMode="NoResize" BorderThickness="1.2" BorderBrush="Black">
     
-    <!--Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
+    <!-- Control Template Override für Buttons um Highlighting bei Mouseover zu verhindern !-->
     <Window.Resources>
         <ControlTemplate x:Key="NoMouseOverButtonTemplate"
              TargetType="Button">
@@ -25,7 +25,7 @@
         </ControlTemplate>
     </Window.Resources>
 
-    <!--Control Templates Override ENDE !-->
+    <!-- Control Templates Override ENDE !-->
 
     <Grid>
         <Grid.RowDefinitions>
