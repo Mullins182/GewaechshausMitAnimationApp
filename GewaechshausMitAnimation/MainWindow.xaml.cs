@@ -7,6 +7,8 @@ namespace GewaechshausMitAnimation
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
     
@@ -120,6 +122,11 @@ namespace GewaechshausMitAnimation
         private void set_indoor_temp_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             set_indoor_temp.Background = new SolidColorBrush(Color.FromArgb(0xFF, 0x3E, 0x11, 0x11));
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         //public static void SystemStatusOutput(GewaechshausSystems Tomate, int indoorTemp, int outdoorTemp)

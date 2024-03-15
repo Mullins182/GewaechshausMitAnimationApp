@@ -56,6 +56,9 @@
         </StackPanel>
         <Image x:Name="GewaechshausSkizze" HorizontalAlignment="Right" Height="372" VerticalAlignment="Bottom" Width="496" Source="/gewaechshausSkizze.jpg" Cursor="Hand" Opacity="0.85"/>
         <Image x:Name="GewaechshausInnen" Grid.Column="1" HorizontalAlignment="Left" Height="372" VerticalAlignment="Bottom" Width="578" Source="/gewaechshausInnen.jpg" Cursor="Hand" Opacity="0.85"/>
+        <Button x:Name="exit" Grid.Row="0" Grid.Column="1" Width="40" Height="40" Content="X" Background="#000000" Foreground="Red" FontFamily="Arial" 
+                FontWeight="Bold" FontSize="35" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,3,3,0" Click="exit_Click" ClickMode="Release"
+                Template="{StaticResource NoMouseOverButtonTemplate}"/>
         <Label Content="GEWÄCHSHAUS STEUERUNG" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="548" Height="50" Cursor="Hand" FontFamily="MV Boli" FontSize="24" Foreground="#FFC6D019" FontWeight="Bold"/>
         <TextBlock x:Name="ActualTempIndoor" Margin="0,0,100,180" Width="auto" Height="55" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="20 °C" TextAlignment="center" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Grid.Column="1" Grid.Row="0"/>
         <TextBlock x:Name="ActualTempOutdoor" Margin="100,0,0,180" Width="auto" Height="55" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="20 °C" TextAlignment="center" FontSize="48" FontFamily="Chiller" FontWeight="Bold" Foreground="#FFA9CC13" Grid.Column="0" Grid.Row="0"/>
