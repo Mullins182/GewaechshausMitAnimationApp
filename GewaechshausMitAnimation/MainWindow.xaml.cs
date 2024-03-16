@@ -26,6 +26,8 @@ namespace GewaechshausMitAnimation
             KuehlungStatus.Text         = Tomate.getKuehlungStatus();
             HeizungStatus.Text          = Tomate.getHeizungStatus();
             VerdunklungStatus.Text      = Tomate.getVerdunklStatus();
+
+            exit.BorderThickness        = new Thickness(2,3,3,2);
         }
 
         private void outdoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -94,13 +96,13 @@ namespace GewaechshausMitAnimation
                 for (int i = 4; i > 0; i--)
                 {
                     set_indoor_temp.BorderThickness = new Thickness(0, 2.6, 0, 2.6);
-                    set_indoor_temp.BorderBrush = Brushes.LimeGreen;
+                    set_indoor_temp.BorderBrush     = Brushes.LimeGreen;
 
-                    await Task.Delay(100);
+                    await Task.Delay(133);
 
                     set_indoor_temp.BorderThickness = new Thickness(0);
 
-                    await Task.Delay(100);
+                    await Task.Delay(133);
                 }
             }
         }
@@ -125,8 +127,16 @@ namespace GewaechshausMitAnimation
             set_indoor_temp.Background = new SolidColorBrush(Color.FromArgb(0xFF, 0x3E, 0x11, 0x11));
         }
 
-        private void exit_Click(object sender, RoutedEventArgs e)
+        private async void exit_Click(object sender, RoutedEventArgs e)
         {
+            while (exit.IsPressed)
+            {
+                exit.BorderThickness    = new Thickness(2.4,4,4,3.4);
+                exit.BorderBrush        = Brushes.Lime;
+                exit.Foreground         = Brushes.Lime;
+                await Task.Delay(250);
+            }
+
             this.Close();
         }
     }
