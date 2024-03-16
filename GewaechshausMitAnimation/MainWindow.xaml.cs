@@ -27,7 +27,7 @@ namespace GewaechshausMitAnimation
             HeizungStatus.Text          = Tomate.getHeizungStatus();
             VerdunklungStatus.Text      = Tomate.getVerdunklStatus();
 
-            exit.BorderThickness        = new Thickness(2,3,3,2);
+            exit.BorderThickness        = new Thickness(1,2,1,2);   // Button 3D-Effect with Borderlines
         }
 
         private void outdoorTempSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -131,7 +131,7 @@ namespace GewaechshausMitAnimation
         {
             while (exit.IsPressed)
             {
-                exit.BorderThickness    = new Thickness(2.4,4,4,3.4);
+                exit.BorderThickness    = new Thickness(1.3,1.7,3.5,3.5);   // Button 3D-Effect with Borderlines
                 exit.BorderBrush        = Brushes.Lime;
                 exit.Foreground         = Brushes.Lime;
                 await Task.Delay(250);
